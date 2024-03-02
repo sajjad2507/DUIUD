@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.example.duiudattender.fragments.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.duiudattender.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_passwordCheck"
+            app:destination="@id/passwordCheck" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordCheck"
+        android:name="com.example.duiudattender.fragments.PasswordCheck"
+        android:label="fragment_password_check"
+        tools:layout="@layout/fragment_password_check" >
+        <action
+            android:id="@+id/action_passwordCheck_to_adminHome2"
+            app:destination="@id/adminHome2" />
+        <action
+            android:id="@+id/action_passwordCheck_to_teacherAttendance"
+            app:destination="@id/teacherAttendance" />
+        <action
+            android:id="@+id/action_passwordCheck_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminHome2"
+        android:name="com.example.duiudattender.fragments.AdminHome"
+        android:label="fragment_admin_home"
+        tools:layout="@layout/fragment_admin_home" >
+        <action
+            android:id="@+id/action_adminHome2_to_addTeacher"
+            app:destination="@id/addTeacher" />
+        <action
+            android:id="@+id/action_adminHome2_to_teacherDetails"
+            app:destination="@id/teacherDetails" />
+        <action
+            android:id="@+id/action_adminHome2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_adminHome2_to_removeTeacherList22"
+            app:destination="@id/removeTeacherList2" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherAttendance"
+        android:name="com.example.duiudattender.fragments.TeacherAttendance"
+        android:label="fragment_teacher_attendance"
+        tools:layout="@layout/fragment_teacher_attendance" >
+        <action
+            android:id="@+id/action_teacherAttendance_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTeacher"
+        android:name="com.example.duiudattender.fragments.AddTeacher"
+        android:label="fragment_add_teacher"
+        tools:layout="@layout/fragment_add_teacher" >
+        <action
+            android:id="@+id/action_addTeacher_to_adminHome2"
+            app:destination="@id/adminHome2" />
+    </fragment>
+    <fragment
+        android:id="@+id/removeTeacher"
+        android:name="com.example.duiudattender.fragments.RemoveTeacher"
+        android:label="fragment_remove_teacher"
+        tools:layout="@layout/fragment_remove_teacher" >
+        <action
+            android:id="@+id/action_removeTeacher_to_adminHome2"
+            app:destination="@id/adminHome2" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherDetails"
+        android:name="com.example.duiudattender.fragments.TeacherDetails"
+        android:label="fragment_teacher_details"
+        tools:layout="@layout/fragment_teacher_details" >
+        <action
+            android:id="@+id/action_teacherDetails_to_adminHome2"
+            app:destination="@id/adminHome2" />
+    </fragment>
+    <fragment
+        android:id="@+id/removeTeacherList2"
+        android:name="com.example.duiudattender.fragments.RemoveTeacherList"
+        android:label="fragment_remove_teacher_list"
+        tools:layout="@layout/fragment_remove_teacher_list" >
+        <action
+            android:id="@+id/action_removeTeacherList2_to_removeTeacher"
+            app:destination="@id/removeTeacher" />
+        <action
+            android:id="@+id/action_removeTeacherList2_to_removeTeacher2"
+            app:destination="@id/removeTeacher" />
+    </fragment>
+</navigation>

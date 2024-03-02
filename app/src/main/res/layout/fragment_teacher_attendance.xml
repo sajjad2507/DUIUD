@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#678A8A"
+    tools:context=".fragments.TeacherAttendance">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/mainImg"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/noteSection"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="36dp"
+            android:background="@drawable/bg_notes"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mainImg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:text="Sign In"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Notes" />
+
+            <EditText
+                android:id="@+id/edtNotes"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/edt"
+                android:gravity="top"
+                android:hint="Enter Notes....."
+                android:padding="8dp"
+                android:textColor="#8C8C8C"
+                android:textColorHint="#8C8C8C" />
+
+            <Button
+                android:id="@+id/addNoteBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="Add Note"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/addNote"
+            android:layout_width="130dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="40dp"
+            android:visibility="visible"
+            android:text="Add Note"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noteSection" />
+
+        <Button
+            android:id="@+id/signInBtn"
+            android:layout_width="130dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="120dp"
+            android:visibility="visible"
+            android:text="Sign In"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noteSection" />
+
+        <Button
+            android:id="@+id/signOutBtn"
+            android:layout_width="130dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="190dp"
+            android:visibility="visible"
+            android:text="Sign Out"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noteSection" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
